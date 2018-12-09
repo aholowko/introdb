@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/aholowko/introdb.svg?branch=master)](https://travis-ci.org/aholowko/introdb)
+
 # requirements
 
 * save and read using 4kB pages

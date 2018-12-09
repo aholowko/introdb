@@ -23,7 +23,6 @@ import java.util.logging.Logger;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Tag;
-import org.junit.jupiter.api.Test;
 
 public class ConcurrentReadWriteUnorderedHeapFileTest {
 
@@ -58,7 +57,7 @@ public class ConcurrentReadWriteUnorderedHeapFileTest {
 		
 	}
 
-	@Test
+//	@Test
 	@Tag("slow")
 	public void concurrentReadWrite() throws Exception {
 
