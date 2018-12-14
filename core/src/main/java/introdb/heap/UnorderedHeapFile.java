@@ -28,7 +28,7 @@ class UnorderedHeapFile implements Store {
     }
 
     @Override
-    public void put(Entry entry) throws IOException, ClassNotFoundException {
+    public synchronized void put(Entry entry) throws IOException, ClassNotFoundException {
         log("Putting the entry: " + entry);
         final Record record = Record.of(entry);
         final int recordSize = record.size();
@@ -72,7 +72,7 @@ class UnorderedHeapFile implements Store {
     }
 
     @Override
-    public Object get(Serializable key) throws IOException, ClassNotFoundException {
+    public synchronized Object get(Serializable key) throws IOException, ClassNotFoundException {
         log("Looking for a key: " + key);
         final byte[] keySerialized = Record.serialize(key);
         final ByteBuffer page = preparePage();
